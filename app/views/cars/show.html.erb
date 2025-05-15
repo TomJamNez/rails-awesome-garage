@@ -1,0 +1,20 @@
+<h1>Cars#show</h1>
+<p>Find me in app/views/cars/show.html.erb</p>
+<div class="container">
+    <%= @car.brand %>
+    <%= @car.model %>
+    <%= @car.year %>
+    <%= @car.fuel %>
+    <%= link_to "Add review", new_car_review_path(@car) %>
+</div>
+
+<div class="container">
+    <% @car.reviews.each do |review| %>
+    <div class="card">
+      <p>comment: <%= review.comment %></p>
+      <p>Rating: <%= review.rating %></p>
+    </div>
+    <% end %>
+</div>
+
+<%= link_to "Back to Cars", cars_path %>

@@ -1,0 +1,14 @@
+<h1>Cars#index</h1>
+<p>Find me in app/views/cars/index.html.erb</p>
+
+<div class="container">
+  <% @cars.each do |car| %>
+  <div class="card">
+    <%= car.brand %>
+    <%= car.model %>
+    <%= car.year %>
+    <%= car.fuel %>
+    <%= link_to "show car", car_path(car) %>
+  </div>
+  <% end %>
+</div>
