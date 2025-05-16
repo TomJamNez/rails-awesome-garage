@@ -18,8 +18,8 @@ Owner.create(nickname: "Terry")
 Owner.create(nickname: "Gazza")
 
 puts "creating cars"
-Car.create!(brand: "Fiat", model: "500", year: 2017, fuel:"petrol", owner: Owner.find_by(nickname: "Bobski"))
-Car.create!(brand: "Toyota", model: "Aygo", year: 2016, fuel:"petrol", owner: Owner.find_by(nickname: "Terry"))
-Car.create!(brand: "Mercedes", model: "GLA", year: 2018, fuel:"petrol", owner: Owner.find_by(nickname: "Gazza"))
+Car.create!(brand: "Chevrolet", model: "Corvette C6", year: 2017, fuel:"petrol", owner: Owner.find_by(nickname: "Bobski"), image_url:"https://upload.wikimedia.org/wikipedia/en/8/82/Lightning_McQueen.png")
+Car.create!(brand: "Hudson", model: "Hornet", year: 1951, fuel:"diesel", owner: Owner.find_by(nickname: "Terry"), image_url:"https://static.wikia.nocookie.net/worldofcarsdrivein/images/6/61/Fab_Hudson_Hornet.png/revision/latest?cb=20250311221246")
+Car.create!(brand: "Harvester", model: "L170", year: 1957, fuel:"petrol", owner: Owner.find_by(nickname: "Gazza"), image_url:"https://upload.wikimedia.org/wikipedia/en/f/f7/Mater_%28Cars%29.png")
 
 puts "finished seeding"

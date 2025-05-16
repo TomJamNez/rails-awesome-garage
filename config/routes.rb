@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'pages/home'
   get 'favourites/index'
   get 'reviews/new'
 
@@ -9,7 +10,9 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
   # Defines the root path route ("/")
-  # root "posts#index"
+#  root "posts#index"
+
+root to: "pages#home"
 
   resources :cars, only: [:index, :show, :select] do
     resources :reviews, only: [:create]
